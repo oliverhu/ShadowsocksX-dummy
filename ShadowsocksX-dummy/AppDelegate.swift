@@ -35,8 +35,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         ensureLaunchAgentsDirOwner()
-        ServerProfileManager.shared.currentProfile = ServerProfile()
+        ServerProfileManager.shared.currentProfile = 
         InstallSSLocal()
+        ProxyConfHelper.install()
+        ProxyConfHelper.enableGlobalProxy()
         SyncSSLocal()
     }
 
