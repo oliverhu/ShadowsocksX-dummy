@@ -12,6 +12,24 @@
 		BA4F726220BE677E006417EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4F726120BE677E006417EA /* Assets.xcassets */; };
 		BA4F726520BE677E006417EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4F726320BE677E006417EA /* Main.storyboard */; };
 		BA4F727120BE677E006417EA /* ShadowsocksX_dummyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4F727020BE677E006417EA /* ShadowsocksX_dummyTests.swift */; };
+		BA4F727D20BE68F9006417EA /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4F727B20BE68F9006417EA /* KeychainAccess.framework */; };
+		BA4F727E20BE68F9006417EA /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA4F727B20BE68F9006417EA /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BA4F727F20BE68F9006417EA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4F727C20BE68F9006417EA /* Alamofire.framework */; };
+		BA4F728020BE68F9006417EA /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA4F727C20BE68F9006417EA /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BA4F728320BE6AA4006417EA /* LaunchAgentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4F728220BE6AA4006417EA /* LaunchAgentHelper.swift */; };
+		BA4F728520BE6B29006417EA /* install_ss_local.sh in Resources */ = {isa = PBXBuildFile; fileRef = BA4F728420BE6B29006417EA /* install_ss_local.sh */; };
+		BA4F728720BE6B49006417EA /* start_ss_local.sh in Resources */ = {isa = PBXBuildFile; fileRef = BA4F728620BE6B49006417EA /* start_ss_local.sh */; };
+		BA4F728920BE6B4F006417EA /* stop_ss_local.sh in Resources */ = {isa = PBXBuildFile; fileRef = BA4F728820BE6B4F006417EA /* stop_ss_local.sh */; };
+		BA4F728B20BE6E8E006417EA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4F728A20BE6E8E006417EA /* Extensions.swift */; };
+		BA4F728D20BE6F3A006417EA /* ServerProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4F728C20BE6F3A006417EA /* ServerProfileManager.swift */; };
+		BA4F729420BE7285006417EA /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4F729320BE7285006417EA /* SHA1.swift */; };
+		BA4F729620BE761C006417EA /* fix_dir_owner.sh in Resources */ = {isa = PBXBuildFile; fileRef = BA4F729520BE761C006417EA /* fix_dir_owner.sh */; };
+		BA4F729820BE797D006417EA /* ss-local in Resources */ = {isa = PBXBuildFile; fileRef = BA4F729720BE797C006417EA /* ss-local */; };
+		BA4F72B020BE7AE3006417EA /* libpcre.1.dylib in Resources */ = {isa = PBXBuildFile; fileRef = BA4F72AB20BE7AE3006417EA /* libpcre.1.dylib */; };
+		BA4F72B120BE7AE3006417EA /* libmbedcrypto.2.8.0.dylib in Resources */ = {isa = PBXBuildFile; fileRef = BA4F72AC20BE7AE3006417EA /* libmbedcrypto.2.8.0.dylib */; };
+		BA4F72B220BE7AE3006417EA /* libcares.2.dylib in Resources */ = {isa = PBXBuildFile; fileRef = BA4F72AD20BE7AE3006417EA /* libcares.2.dylib */; };
+		BA4F72B320BE7AE3006417EA /* libsodium.23.dylib in Resources */ = {isa = PBXBuildFile; fileRef = BA4F72AE20BE7AE3006417EA /* libsodium.23.dylib */; };
+		BA4F72B420BE7AE3006417EA /* libev.4.dylib in Resources */ = {isa = PBXBuildFile; fileRef = BA4F72AF20BE7AE3006417EA /* libev.4.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +42,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BA4F728120BE68F9006417EA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BA4F727E20BE68F9006417EA /* KeychainAccess.framework in Embed Frameworks */,
+				BA4F728020BE68F9006417EA /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BA4F725A20BE677C006417EA /* ShadowsocksX-dummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShadowsocksX-dummy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4F725D20BE677C006417EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +68,31 @@
 		BA4F726C20BE677E006417EA /* ShadowsocksX-dummyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ShadowsocksX-dummyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4F727020BE677E006417EA /* ShadowsocksX_dummyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowsocksX_dummyTests.swift; sourceTree = "<group>"; };
 		BA4F727220BE677E006417EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA4F727B20BE68F9006417EA /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/Mac/KeychainAccess.framework; sourceTree = "<group>"; };
+		BA4F727C20BE68F9006417EA /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		BA4F728220BE6AA4006417EA /* LaunchAgentHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAgentHelper.swift; sourceTree = "<group>"; };
+		BA4F728420BE6B29006417EA /* install_ss_local.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install_ss_local.sh; sourceTree = "<group>"; };
+		BA4F728620BE6B49006417EA /* start_ss_local.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = start_ss_local.sh; sourceTree = "<group>"; };
+		BA4F728820BE6B4F006417EA /* stop_ss_local.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = stop_ss_local.sh; sourceTree = "<group>"; };
+		BA4F728A20BE6E8E006417EA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BA4F728C20BE6F3A006417EA /* ServerProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerProfileManager.swift; sourceTree = "<group>"; };
+		BA4F728F20BE71F1006417EA /* libmbedcrypto.2.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmbedcrypto.2.8.0.dylib; path = "../ShadowsocksX-NG/ShadowsocksX-NG/libmbedcrypto.2.8.0.dylib"; sourceTree = "<group>"; };
+		BA4F729120BE7261006417EA /* libcommonCrypto.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcommonCrypto.tbd; path = usr/lib/system/libcommonCrypto.tbd; sourceTree = SDKROOT; };
+		BA4F729320BE7285006417EA /* SHA1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
+		BA4F729520BE761C006417EA /* fix_dir_owner.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = fix_dir_owner.sh; sourceTree = "<group>"; };
+		BA4F729720BE797C006417EA /* ss-local */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "ss-local"; sourceTree = "<group>"; };
+		BA4F729A20BE798F006417EA /* libcares.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcares.2.dylib; path = "../ShadowsocksX-NG/ShadowsocksX-NG/libcares.2.dylib"; sourceTree = "<group>"; };
+		BA4F729B20BE798F006417EA /* libsodium.23.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsodium.23.dylib; path = "../ShadowsocksX-NG/ShadowsocksX-NG/libsodium.23.dylib"; sourceTree = "<group>"; };
+		BA4F72A120BE7A01006417EA /* libmbedcrypto.2.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmbedcrypto.2.8.0.dylib; sourceTree = "<group>"; };
+		BA4F72A220BE7A01006417EA /* libcares.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcares.2.dylib; sourceTree = "<group>"; };
+		BA4F72A320BE7A01006417EA /* libsodium.23.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsodium.23.dylib; sourceTree = "<group>"; };
+		BA4F72A720BE7A83006417EA /* libev.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libev.4.dylib; sourceTree = "<group>"; };
+		BA4F72A920BE7A91006417EA /* libpcre.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpcre.1.dylib; sourceTree = "<group>"; };
+		BA4F72AB20BE7AE3006417EA /* libpcre.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpcre.1.dylib; sourceTree = "<group>"; };
+		BA4F72AC20BE7AE3006417EA /* libmbedcrypto.2.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmbedcrypto.2.8.0.dylib; sourceTree = "<group>"; };
+		BA4F72AD20BE7AE3006417EA /* libcares.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcares.2.dylib; sourceTree = "<group>"; };
+		BA4F72AE20BE7AE3006417EA /* libsodium.23.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsodium.23.dylib; sourceTree = "<group>"; };
+		BA4F72AF20BE7AE3006417EA /* libev.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libev.4.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4F727D20BE68F9006417EA /* KeychainAccess.framework in Frameworks */,
+				BA4F727F20BE68F9006417EA /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +118,22 @@
 		BA4F725120BE677C006417EA = {
 			isa = PBXGroup;
 			children = (
+				BA4F72AD20BE7AE3006417EA /* libcares.2.dylib */,
+				BA4F72AF20BE7AE3006417EA /* libev.4.dylib */,
+				BA4F72AC20BE7AE3006417EA /* libmbedcrypto.2.8.0.dylib */,
+				BA4F72AB20BE7AE3006417EA /* libpcre.1.dylib */,
+				BA4F72AE20BE7AE3006417EA /* libsodium.23.dylib */,
+				BA4F729720BE797C006417EA /* ss-local */,
+				BA4F729520BE761C006417EA /* fix_dir_owner.sh */,
+				BA4F728820BE6B4F006417EA /* stop_ss_local.sh */,
+				BA4F728620BE6B49006417EA /* start_ss_local.sh */,
+				BA4F728420BE6B29006417EA /* install_ss_local.sh */,
+				BA4F727C20BE68F9006417EA /* Alamofire.framework */,
+				BA4F727B20BE68F9006417EA /* KeychainAccess.framework */,
 				BA4F725C20BE677C006417EA /* ShadowsocksX-dummy */,
 				BA4F726F20BE677E006417EA /* ShadowsocksX-dummyTests */,
 				BA4F725B20BE677C006417EA /* Products */,
+				BA4F728E20BE71F1006417EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +155,10 @@
 				BA4F726320BE677E006417EA /* Main.storyboard */,
 				BA4F726620BE677E006417EA /* Info.plist */,
 				BA4F726720BE677E006417EA /* ShadowsocksX_dummy.entitlements */,
+				BA4F728220BE6AA4006417EA /* LaunchAgentHelper.swift */,
+				BA4F728A20BE6E8E006417EA /* Extensions.swift */,
+				BA4F728C20BE6F3A006417EA /* ServerProfileManager.swift */,
+				BA4F729320BE7285006417EA /* SHA1.swift */,
 			);
 			path = "ShadowsocksX-dummy";
 			sourceTree = "<group>";
@@ -95,6 +172,22 @@
 			path = "ShadowsocksX-dummyTests";
 			sourceTree = "<group>";
 		};
+		BA4F728E20BE71F1006417EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA4F72A920BE7A91006417EA /* libpcre.1.dylib */,
+				BA4F72A720BE7A83006417EA /* libev.4.dylib */,
+				BA4F729A20BE798F006417EA /* libcares.2.dylib */,
+				BA4F729B20BE798F006417EA /* libsodium.23.dylib */,
+				BA4F72A220BE7A01006417EA /* libcares.2.dylib */,
+				BA4F72A120BE7A01006417EA /* libmbedcrypto.2.8.0.dylib */,
+				BA4F72A320BE7A01006417EA /* libsodium.23.dylib */,
+				BA4F729120BE7261006417EA /* libcommonCrypto.tbd */,
+				BA4F728F20BE71F1006417EA /* libmbedcrypto.2.8.0.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,6 +198,7 @@
 				BA4F725620BE677C006417EA /* Sources */,
 				BA4F725720BE677C006417EA /* Frameworks */,
 				BA4F725820BE677C006417EA /* Resources */,
+				BA4F728120BE68F9006417EA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,6 +239,11 @@
 				TargetAttributes = {
 					BA4F725920BE677C006417EA = {
 						CreatedOnToolsVersion = 9.3.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					BA4F726B20BE677E006417EA = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -178,6 +277,16 @@
 			files = (
 				BA4F726220BE677E006417EA /* Assets.xcassets in Resources */,
 				BA4F726520BE677E006417EA /* Main.storyboard in Resources */,
+				BA4F728520BE6B29006417EA /* install_ss_local.sh in Resources */,
+				BA4F729820BE797D006417EA /* ss-local in Resources */,
+				BA4F72B020BE7AE3006417EA /* libpcre.1.dylib in Resources */,
+				BA4F72B120BE7AE3006417EA /* libmbedcrypto.2.8.0.dylib in Resources */,
+				BA4F72B220BE7AE3006417EA /* libcares.2.dylib in Resources */,
+				BA4F72B320BE7AE3006417EA /* libsodium.23.dylib in Resources */,
+				BA4F72B420BE7AE3006417EA /* libev.4.dylib in Resources */,
+				BA4F729620BE761C006417EA /* fix_dir_owner.sh in Resources */,
+				BA4F728720BE6B49006417EA /* start_ss_local.sh in Resources */,
+				BA4F728920BE6B4F006417EA /* stop_ss_local.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +305,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA4F726020BE677C006417EA /* ViewController.swift in Sources */,
+				BA4F728320BE6AA4006417EA /* LaunchAgentHelper.swift in Sources */,
+				BA4F729420BE7285006417EA /* SHA1.swift in Sources */,
 				BA4F725E20BE677C006417EA /* AppDelegate.swift in Sources */,
+				BA4F728D20BE6F3A006417EA /* ServerProfileManager.swift in Sources */,
+				BA4F728B20BE6E8E006417EA /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,14 +460,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "ShadowsocksX-dummy/ShadowsocksX_dummy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2243E5YVZ9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "ShadowsocksX-dummy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chuanyue.ShadowsocksX-dummy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -366,14 +487,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "ShadowsocksX-dummy/ShadowsocksX_dummy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2243E5YVZ9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "ShadowsocksX-dummy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chuanyue.ShadowsocksX-dummy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
