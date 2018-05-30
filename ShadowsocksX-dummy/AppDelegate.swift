@@ -35,15 +35,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         ensureLaunchAgentsDirOwner()
-        ServerProfileManager.shared.currentProfile = 
-        InstallSSLocal()
-        ProxyConfHelper.install()
-        ProxyConfHelper.enableGlobalProxy()
-        SyncSSLocal()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        ProxyConfHelper.disableProxy()
     }
 
 

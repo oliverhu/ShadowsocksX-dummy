@@ -14,4 +14,5 @@
 
 + (void)enableGlobalProxy;
 
++ (void)disableProxy;
 @end
