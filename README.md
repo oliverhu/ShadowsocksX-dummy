@@ -8,6 +8,10 @@ of ShawdowsockX client.
 
 Currently only support *Global Proxy* or no proxy.
 
+### Screenshot
+
+![Screenshot](img/mini-ng.png)
+
 ## LICENSE
 
 The project is released under the terms of the GPLv3.
