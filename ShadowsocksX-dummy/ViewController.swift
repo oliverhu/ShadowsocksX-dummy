@@ -41,6 +41,7 @@ class ViewController: NSViewController {
                 ud.set(Int(port.stringValue), forKey: ViewController.SERVER_PORT)
             }
             ServerProfileManager.shared.currentProfile = ServerProfile(sessionId: UUID().uuidString, serverAddress: host.stringValue, serverPort: Int(port.stringValue)!, password: password.stringValue, localAddress: localIP.stringValue, method: method.stringValue, localPort: Int(localPort.stringValue)!)
+            UserDefaults.standard.set(Int(localPort.stringValue)!, forKey: "LocalSocks5.ListenPort")
             InstallSSLocal()
             ProxyConfHelper.install()
             ProxyConfHelper.enableGlobalProxy()

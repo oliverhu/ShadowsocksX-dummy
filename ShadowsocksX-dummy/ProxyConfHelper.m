@@ -132,7 +132,7 @@
 }
 
 + (void)enableGlobalProxy {
-    NSUInteger port = 1086;//[[NSUserDefaults standardUserDefaults]integerForKey:@"LocalSocks5.ListenPort"];
+    NSUInteger port = [[NSUserDefaults standardUserDefaults]integerForKey:@"LocalSocks5.ListenPort"];
 
     NSMutableArray* args = [@[@"--mode", @"global", @"--port"
                               , [NSString stringWithFormat:@"%lu", (unsigned long)port]]mutableCopy];
@@ -143,7 +143,7 @@
 
 + (void)disableProxy {
     // 带上所有参数是为了判断是否原有代理设置是否由ssx-ng设置的。如果是用户手工设置的其他配置，则不进行清空。
-    NSUInteger port = 1086;//[[NSUserDefaults standardUserDefaults]integerForKey:@"LocalSocks5.ListenPort"];
+    NSUInteger port = [[NSUserDefaults standardUserDefaults]integerForKey:@"LocalSocks5.ListenPort"];
 
     NSMutableArray* args = [@[@"--mode", @"off"
                               , @"--port", [NSString stringWithFormat:@"%lu", (unsigned long)port]
