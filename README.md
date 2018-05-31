@@ -1,12 +1,12 @@
 # ShadowsocksX-dummy
-an extremely simplified version of ShadownsocksX-NG, only remains the minimal to start a shadowsocks server.
+An extremely simplified version of ShadownsocksX-NG, only remains the minimal to start a shadowsocks server.
 
 ## Why
 
 The original ShadowsocksX-NG is repo is too complicated for people to comprehend how it works. Here is a bare minimal version of the macOS version
 of ShawdowsockX client.
 
-Currently only support *Global Proxy* or no proxy.
+Currently support *auto proxy* with pac, *global proxy* or *no proxy*.
 
 ### Screenshot
 
