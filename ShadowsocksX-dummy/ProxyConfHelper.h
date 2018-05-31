@@ -15,4 +15,5 @@
 + (void)enableGlobalProxy;
 
 + (void)disableProxy;
++ (void)enablePACProxy;
 @end

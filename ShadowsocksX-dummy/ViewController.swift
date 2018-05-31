@@ -15,6 +15,7 @@ class ViewController: NSViewController {
     static let LOCAL_ADDRESS: String = "local_address"
     static let LOCAL_PORT: String = "local_port"
     static let SERVER_PORT: String = "server_port"
+    static let PAC: String = "pac_url"
 
     @IBOutlet weak var host: NSTextField!
     @IBOutlet weak var port: NSTextField!
@@ -23,9 +24,31 @@ class ViewController: NSViewController {
     @IBOutlet weak var localPort: NSTextField!
     @IBOutlet weak var method: NSTextField!
     @IBOutlet weak var remember: NSButton!
+    @IBOutlet weak var pacBox: NSButton!
+
+    @IBOutlet weak var pac: NSTextField!
+
     @IBOutlet weak var connect: NSButton!
 
     let ud = UserDefaults.standard
+
+    @IBAction func autoPacTapped(_ sender: Any) {
+        updateUI()
+    }
+
+    func updateUI() {
+        if pacBox.state == NSControl.StateValue.on {
+            localIP.isEnabled = true
+            localPort.isEnabled = true
+            pac.isEnabled = true
+        } else {
+            localIP.isEnabled = false
+            localPort.isEnabled = false
+            pac.isEnabled = false
+        }
+
+    }
+
 
     @IBAction func connectTapped(_ sender: Any) {
         if connect.title == "Disconnect" {
@@ -39,12 +62,19 @@ class ViewController: NSViewController {
                 ud.set(localIP.stringValue, forKey: ViewController.LOCAL_ADDRESS)
                 ud.set(Int(localPort.stringValue), forKey: ViewController.LOCAL_PORT)
                 ud.set(Int(port.stringValue), forKey: ViewController.SERVER_PORT)
+                ud.set(pac.stringValue, forKey: ViewController.PAC)
             }
             ServerProfileManager.shared.currentProfile = ServerProfile(sessionId: UUID().uuidString, serverAddress: host.stringValue, serverPort: Int(port.stringValue)!, password: password.stringValue, localAddress: localIP.stringValue, method: method.stringValue, localPort: Int(localPort.stringValue)!)
             UserDefaults.standard.set(Int(localPort.stringValue)!, forKey: "LocalSocks5.ListenPort")
+            UserDefaults.standard.set(pac.stringValue, forKey: "PAC.URL")
             InstallSSLocal()
             ProxyConfHelper.install()
-            ProxyConfHelper.enableGlobalProxy()
+            if pacBox.state == NSControl.StateValue.on {
+                ProxyConfHelper.enablePACProxy()
+            } else {
+                ProxyConfHelper.enableGlobalProxy()
+            }
+
             SyncSSLocal()
             connect.title = "Disconnect"
         }
@@ -57,6 +87,7 @@ class ViewController: NSViewController {
             let password = ud.value(forKey: ViewController.PASSWORD) as? String,
             let serverPort = ud.value(forKey: ViewController.SERVER_PORT) as? Int,
             let localPort = ud.value(forKey: ViewController.LOCAL_PORT) as? Int,
+            let pac = ud.value(forKey: ViewController.PAC) as? String,
             let localIp = ud.value(forKey: ViewController.LOCAL_ADDRESS) as? String {
             self.host.stringValue = host
             self.method.stringValue = method
@@ -64,11 +95,9 @@ class ViewController: NSViewController {
             self.port.stringValue = "\(serverPort)"
             self.localPort.stringValue = "\(localPort)"
             self.localIP.stringValue = localIp
-
+            self.pac.stringValue = pac
         }
-
-
-        // Do any additional setup after loading the view.
+        updateUI()
     }
 
     override var representedObject: Any? {

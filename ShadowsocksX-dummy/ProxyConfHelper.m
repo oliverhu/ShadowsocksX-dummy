@@ -131,6 +131,16 @@
     }
 }
 
++ (void)enablePACProxy {
+    NSString* path = [[NSUserDefaults standardUserDefaults] valueForKey:@"PAC.URL"];
+    NSURL* url = [NSURL URLWithString:path];
+    NSMutableArray* args = [@[@"--mode", @"auto", @"--pac-url",
+                              [url absoluteString]] mutableCopy];
+    [self addArguments4ManualSpecifyNetworkServices:args];
+    [self addArguments4ManualSpecifyProxyExceptions:args];
+    [self callHelper:args];
+}
+
 + (void)enableGlobalProxy {
     NSUInteger port = [[NSUserDefaults standardUserDefaults]integerForKey:@"LocalSocks5.ListenPort"];
 
